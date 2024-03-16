@@ -26,23 +26,83 @@ body {
   font-size: 14px;
 }
 
-nav {
-  background-color: black; /* Fondo negro */
+/* nav {
+  background-color: black; 
 }
 
 nav ul {
-  list-style-type: none; /* Quitar viñetas de la lista */
-  padding: 10px; /* Eliminar el padding predeterminado */
-  margin: 0; /* Eliminar el margen predeterminado */
-  display: flex; /* Mostrar los elementos en línea */
+  list-style-type: none; 
+  padding: 10px; 
+  margin: 0; 
+  display: flex; 
 }
 
 nav li {
-  margin-right: 10px; /* Espacio entre elementos */
-  color: white; /* Color de texto blanco */
-  text-decoration: none; /* Quitar subrayado */
+  margin-right: 10px;
+  color: white; 
+  text-decoration: none; 
   width: 100%;
+} */
+
+/* Estilos para el nav */
+nav {
+  background-color: #333; /* Color de fondo */
+  padding: 10px; /* Espaciado interno */
 }
+
+nav ul {
+  list-style-type: none; /* Quitar viñetas */
+  margin: 0; /* Eliminar margen */
+  padding: 0; /* Eliminar padding */
+}
+
+nav li {
+  display: inline-block; /* Mostrar en línea */
+  margin-right: 10px; /* Espaciado entre elementos */
+}
+
+nav a {
+  text-decoration: none; /* Quitar subrayado */
+  color: white; /* Color del texto */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilos para el grid de clasificación */
+#inv-display {
+  display: grid; /* Utilizar grid */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas automáticas con tamaño mínimo de 200px */
+  gap: 20px; /* Espacio entre elementos */
+  padding: 0; /* Eliminar padding */
+  margin: 0; /* Eliminar margen */
+  list-style-type: none; /* Quitar viñetas */
+}
+
+#inv-display li {
+  border: 1px solid #ddd; /* Borde gris */
+  padding: 10px; /* Espaciado interno */
+}
+
+#inv-display img {
+  max-width: 100%; /* Ancho máximo de la imagen */
+  height: auto; /* Altura automática */
+}
+
+.namePrice {
+  margin-top: 10px; /* Espacio superior */
+}
+
+.namePrice h2 {
+  margin: 0; /* Eliminar margen */
+}
+
+.namePrice span {
+  font-weight: bold; /* Texto en negrita */
+  color: #333; /* Color del texto */
+}
+
 
 h1 {
   text-align: center;
@@ -141,5 +201,22 @@ ul {
 
   .car-image img {
     content: url('../images/vehicles/delorean-Photoroom.png-Photoroom.png');
+  }
+
+  nav {
+    display: flex; /* Utilizar flexbox */
+    justify-content: space-between; /* Distribuir elementos horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 10px 20px; /* Aumentar el padding */
+  }
+
+  nav ul {
+    display: flex; /* Utilizar flexbox */
+    justify-content: center;
+    flex-grow: 1; /* Permitir que el nav ocupe todo el espacio disponible */
+  }
+
+  nav li {
+    margin-left: 20px; /* Espaciado entre elementos */
   }
 }
