@@ -1,19 +1,20 @@
 const { Pool } = require("pg")
 require("dotenv").config()
-/* ***************
- * Connection Pool
- * SSL Object needed for local testing of app
- * But will cause problems in production environment
- * If - else will make determination which to use
- * *************** */
+
 let pool
+
 if (process.env.NODE_ENV == "development") {
   pool = new Pool({
     connectionString: process.env.DATABASE_URL,
     ssl: {
       rejectUnauthorized: false,
     },
-})
+  })
+} else {
+  pool = new Pool({
+    connectionString: process.env.DATABASE_URL,
+  })
+}
 
 // Added for troubleshooting queries
 // during development
@@ -29,12 +30,7 @@ module.exports = {
     }
   },
 }
-} else {
-  pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-  })
-  module.exports = pool
-}
+
 
 /**
  Line 1 - imports the "Pool" functionality from the "pg" package. A pool is a collection of connection objects (10 is the default number) that allow multiple site visitors to be interacting with the database at any given time. This keeps you from having to create a separate connection for each interaction.
@@ -59,3 +55,5 @@ Line 35 - ends the Pool object and instance creation.
 Line 36 - exports the pool object to be used whenever a database connection is needed. This is for the production environment, which means the queries will not be entered into the console.
 Line 37 - ends the else structure.
  */
+
+//Hice un cambio en el orden del codigo. Ver registro.
