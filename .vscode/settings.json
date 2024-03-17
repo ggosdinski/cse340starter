@@ -10,7 +10,9 @@
             "server": "localhost",
             "driver": "PostgreSQL",
             "name": "render.com",
-            "connectString": "postgres://cse340:ggR4qtKIB4RpHC7rgxxv3YEOSYIbHpsl@dpg-cnkhs4fjbltc73f65h60-a.oregon-postgres.render.com/cse340_q9ka"
+            "connectString": "postgres://cse3402024:Pg3lZ50QXWFHz2aQUrIkQ4aZiqjV5bBA@dpg-cnn2gp2cn0vc738gs6a0-a.oregon-postgres.render.com/cse3402024"
         }
     ]
 }
+
+/* "postgres://cse340:ggR4qtKIB4RpHC7rgxxv3YEOSYIbHpsl@dpg-cnkhs4fjbltc73f65h60-a.oregon-postgres.render.com/cse340_q9ka" */
